@@ -6,3 +6,12 @@
     top: 0;
     z-index: -1;
 }
+.ortadagi-soz{
+    text-align: center;
+    color: #B1B1B1;
+font-size: 14.311px;
+font-weight: 400;
+line-height: 19.763px; /* 138.095% */
+letter-spacing: 1.288px;
+text-transform: uppercase;
+}

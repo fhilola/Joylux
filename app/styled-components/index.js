@@ -54,46 +54,77 @@ background: ${props=> props.$mainGold ? 'linear-gradient(90deg, #EBBF7C 0%, #CE9
 export const Ul = styled.ul`
 display: flex;
 align-items: center;
+justify-content: center;
 gap: 0 64px;
 list-style-type: none;
 `
+
 export const Li = styled.li`
 text-decoration: none;
-color: #A1A1A1;
+color: ${props => props.$about ? '#000' : '#A1A1A1'};
 font-size: 18px;
 font-weight: 500;
 letter-spacing: 0.54px;
+text-transform: uppercase;
 `
+
 export const IconsWrapper = styled(FlexNavDiv)`
 font-size: 1.5rem;
 color: #A1A1A1;
 `
+
 export const HeroSection = styled.section`
-    min-height: 600px;
-    height: 600px;
-    position: relative;
-    padding: 20px 0;
+margin-bottom: 40px;
+min-height: 600px;
+height: 600px;
+position: relative;
+padding: 20px 0;
 `
 export const HeroContent = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 gap: 10px 0;
-padding-top: 65px
+padding-top: 65px;
 `
-export const HeroTitle = styled.h2`
-width: 538px;
-color: #333B3A;
-font-size: 55px;
+export const Heading = styled.h2`
+width: ${props => props.$smaller ? '538px' : props.$small ? '' :  '521px'};
+color: ${props => props.$small ? '#925754' : '#333B3A'};
+font-size: ${props => props.$smaller ? '40px' : props.$small ? '18px' : '55px'};
 font-weight: 400;
-line-height: 75px;
+line-height: ${props=> props.$small ? '' : '75px'};
 `
-export const HeroDescription = styled.p`
-width: 538px;
+export const Description = styled.p`
+width: ${props => props.$smaller ? '521px' : '550px'};
 color: #858585;
 font-size: 21px;
 font-weight: 400;
 line-height: 35px;
 letter-spacing: 1.89px;
 text-transform: uppercase;
+`
+export const DisplayDiv = styled(HeroContent)`
+padding: 0;
+gap: 15px 0
+`
+export const P = styled.p`
+width: ${props => props.$small ? '150px' : '590px'};
+color: ${props => props.$small ? '#925754' : '#000'};
+font-size: ${props => props.$small ? '17px' : '21px'};
+font-weight: 400;
+line-height: 28px;
+text-align: ${props => props.$small ? 'center' : ''}
+`
+export const SmallDiv = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 15.128px;
+`
+export const ColorfulDiv = styled.div`
+width: 100%;
+height: 100%;
+background: #F3E4E2;
+padding: 50px 0;
+margin: 10px 0
 `

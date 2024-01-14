@@ -1,0 +1,9 @@
+.swiper__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 20px;
+}
+.about-content{
+    width: 30%;
+}
